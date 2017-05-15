@@ -30,7 +30,6 @@ const pairOfTokens = cancelTokens
 const executedRequests = planedRequests
   .withLatestFrom(pairOfTokens)
   .map(([value, tokenSources]) => {
-    console.info(tokenSources);
     if (tokenSources.length === 1) {
       tokenSources.unshift(null);
     }
